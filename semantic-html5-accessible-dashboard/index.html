@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessible enterprise dashboard demonstrating semantic HTML5 and WCAG-minded components.">
+  <title>Overview · Northstar Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Northstar Dashboard home">
+      <span class="brand-mark" aria-hidden="true">N</span><span>Northstar<span class="brand-light"> / Workspace</span></span>
+    </a>
+    <button class="icon-button mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span aria-hidden="true">☰</span><span class="visually-hidden">Toggle navigation</span>
+    </button>
+    <nav id="primary-navigation" class="top-navigation" aria-label="Primary navigation">
+      <a href="index.html" aria-current="page">Overview</a>
+      <a href="projects.html">Projects</a>
+      <a href="reports.html">Reports</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" type="button" id="theme-toggle" aria-pressed="false" aria-label="Switch to dark theme"><span aria-hidden="true">◐</span></button>
+      <span class="avatar" aria-hidden="true">KR</span>
+      <span class="profile-name">Workspace admin</span>
+    </div>
+  </header>
+
+  <div class="app-layout">
+    <aside class="sidebar" aria-label="Workspace sidebar">
+      <p class="sidebar-label">WORKSPACE</p>
+      <nav aria-label="Workspace navigation">
+        <a class="side-link active" href="index.html" aria-current="page"><span aria-hidden="true">▦</span> Overview</a>
+        <a class="side-link" href="projects.html"><span aria-hidden="true">◇</span> Projects</a>
+        <a class="side-link" href="reports.html"><span aria-hidden="true">▤</span> Reports</a>
+      </nav>
+      <div class="sidebar-note">
+        <p class="sidebar-label">ACCESSIBILITY</p>
+        <p>Built with semantic landmarks, visible focus, and keyboard support.</p>
+      </div>
+    </aside>
+
+    <main id="main-content" class="main-content" tabindex="-1">
+      <div class="page-heading">
+        <div><p class="eyebrow">MONDAY, OCTOBER 12, 2026</p><h1>Overview</h1><p class="page-description">A clear view of your workspace activity and current priorities.</p></div>
+        <button class="button button-primary" type="button" data-open-dialog="new-project-dialog"><span aria-hidden="true">＋</span> New project</button>
+      </div>
+
+      <section class="metric-grid" aria-label="Workspace summary">
+        <article class="metric-card"><p class="metric-label">Active projects</p><p class="metric-value">12</p><p class="metric-note"><span class="positive">↑ 8%</span> compared with last month</p></article>
+        <article class="metric-card"><p class="metric-label">Tasks completed</p><p class="metric-value">284</p><p class="metric-note"><span class="positive">↑ 12%</span> compared with last month</p></article>
+        <article class="metric-card"><p class="metric-label">Open issues</p><p class="metric-value">18</p><p class="metric-note"><span class="attention">↓ 3</span> since last week</p></article>
+        <article class="metric-card"><p class="metric-label">Team members</p><p class="metric-value">24</p><p class="metric-note">Across 4 departments</p></article>
+      </section>
+
+      <section class="panel" aria-labelledby="projects-heading">
+        <div class="panel-heading"><div><h2 id="projects-heading">Recent projects</h2><p>Review status and ownership for active work.</p></div><a class="text-link" href="projects.html">View all projects <span aria-hidden="true">→</span></a></div>
+        <div class="table-wrap">
+          <table>
+            <caption class="visually-hidden">Recent projects with owner, status, due date, and progress</caption>
+            <thead><tr><th scope="col">Project</th><th scope="col">Owner</th><th scope="col">Status</th><th scope="col">Due date</th><th scope="col">Progress</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><span class="project-name">Website refresh</span><span class="cell-subtitle">Design system</span></th><td>Priya Sharma</td><td><span class="status status-progress">In progress</span></td><td>Oct 20, 2026</td><td><span class="progress-label">72%</span><progress value="72" max="100" aria-label="Website refresh progress">72%</progress></td></tr>
+              <tr><th scope="row"><span class="project-name">Customer insights</span><span class="cell-subtitle">Analytics</span></th><td>Arjun Rao</td><td><span class="status status-review">In review</span></td><td>Oct 24, 2026</td><td><span class="progress-label">88%</span><progress value="88" max="100" aria-label="Customer insights progress">88%</progress></td></tr>
+              <tr><th scope="row"><span class="project-name">Mobile onboarding</span><span class="cell-subtitle">Product</span></th><td>Meera Nair</td><td><span class="status status-planned">Planned</span></td><td>Nov 02, 2026</td><td><span class="progress-label">24%</span><progress value="24" max="100" aria-label="Mobile onboarding progress">24%</progress></td></tr>
+              <tr><th scope="row"><span class="project-name">Security review</span><span class="cell-subtitle">Infrastructure</span></th><td>Rahul Verma</td><td><span class="status status-progress">In progress</span></td><td>Nov 08, 2026</td><td><span class="progress-label">54%</span><progress value="54" max="100" aria-label="Security review progress">54%</progress></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="lower-grid">
+        <section class="panel" aria-labelledby="activity-heading"><div class="panel-heading"><div><h2 id="activity-heading">Recent activity</h2><p>Latest workspace updates.</p></div></div>
+          <ol class="activity-list">
+            <li><span class="activity-dot" aria-hidden="true"></span><div><p><strong>Priya Sharma</strong> updated Website refresh</p><time datetime="2026-10-12T10:25">25 minutes ago</time></div></li>
+            <li><span class="activity-dot activity-dot-purple" aria-hidden="true"></span><div><p><strong>Arjun Rao</strong> submitted Customer insights for review</p><time datetime="2026-10-12T09:40">1 hour ago</time></div></li>
+            <li><span class="activity-dot activity-dot-green" aria-hidden="true"></span><div><p><strong>Meera Nair</strong> created Mobile onboarding</p><time datetime="2026-10-11T16:15">Yesterday</time></div></li>
+          </ol>
+        </section>
+        <section class="panel" aria-labelledby="quick-heading"><div class="panel-heading"><div><h2 id="quick-heading">Quick actions</h2><p>Common workspace tasks.</p></div></div>
+          <div class="quick-actions"><a href="projects.html" class="quick-action"><span class="quick-icon" aria-hidden="true">◇</span><span><strong>Manage projects</strong><small>Update owners and status</small></span><span aria-hidden="true">→</span></a><a href="reports.html" class="quick-action"><span class="quick-icon" aria-hidden="true">▤</span><span><strong>View reports</strong><small>Explore team performance</small></span><span aria-hidden="true">→</span></a><button class="quick-action quick-action-button" type="button" data-open-dialog="new-project-dialog"><span class="quick-icon" aria-hidden="true">＋</span><span><strong>Create a project</strong><small>Start something new</small></span><span aria-hidden="true">→</span></button></div>
+        </section>
+      </div>
+      <footer class="site-footer"><p>Northstar Workspace · Accessibility-first demo</p><a href="docs/accessibility-notes.html">Accessibility notes</a></footer>
+    </main>
+  </div>
+
+  <dialog id="new-project-dialog" class="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <form id="new-project-form" method="dialog" novalidate>
+      <div class="dialog-heading"><div><p class="eyebrow">WORKSPACE</p><h2 id="dialog-title">Create a project</h2></div><button class="icon-button" type="button" data-close-dialog aria-label="Close dialog">×</button></div>
+      <p id="dialog-description" class="page-description">Enter the basic details to add a project to your workspace.</p>
+      <div class="form-field"><label for="project-title">Project name <span aria-hidden="true">*</span></label><input id="project-title" name="projectTitle" type="text" required minlength="3" maxlength="80" autocomplete="off" aria-describedby="project-title-help project-title-error"><small id="project-title-help" class="field-help">Use 3–80 characters.</small><p id="project-title-error" class="field-error" hidden></p></div>
+      <div class="form-field"><label for="project-owner">Project owner <span aria-hidden="true">*</span></label><select id="project-owner" name="projectOwner" required aria-describedby="project-owner-error"><option value="">Choose an owner</option><option>Priya Sharma</option><option>Arjun Rao</option><option>Meera Nair</option><option>Rahul Verma</option></select><p id="project-owner-error" class="field-error" hidden></p></div>
+      <fieldset class="form-field"><legend>Priority <span class="field-help">(required)</span></legend><div class="radio-row"><label><input type="radio" name="priority" value="Low" required> Low</label><label><input type="radio" name="priority" value="Medium"> Medium</label><label><input type="radio" name="priority" value="High"> High</label></div><p id="priority-error" class="field-error" hidden></p></fieldset>
+      <div id="form-summary" class="form-summary" role="alert" tabindex="-1" hidden></div>
+      <div class="dialog-actions"><button class="button button-secondary" type="button" data-close-dialog>Cancel</button><button class="button button-primary" type="submit">Create project</button></div>
+    </form>
+  </dialog>
+  <div id="live-announcer" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
